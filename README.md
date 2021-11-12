@@ -57,7 +57,7 @@ oc new-app --image-stream=cep-kogito \
 ## Mock　アプリケーションのデプロイ
 
 ```
-oc new-app centos/python-36-centos7~https://github.com/kamorisan/event-emmiter \
+oc new-app centos/python-36-centos7~https://github.com/team-ohc-jp-place/event-emitter \
  -e KAFKA_BROKERS=my-cluster-kafka-brokers:9092 \
  -e KAFKA_TOPIC=incoming-topic -e RATE=1 --name=emitter
 ```
