@@ -11,8 +11,8 @@ rule "Calculate Total Amount" when
         $orderItemName: orderItemName != null
         ]
 then
-    //BigDecimal TotalAmount = $Quantity.multiply($Price);
-    //$p.setTotalAmount(TotalAmount);
+    BigDecimal TotalAmount = $Quantity.multiply($Price);
+    $p.setTotalAmount(TotalAmount);
     System.out.println("orderItemName: "+ $orderItemName +", quantity: "+ $Quantity + ", price: "+ $Price + ", totalAmount: "+ $p.totalAmount);
     update($p);
 end
